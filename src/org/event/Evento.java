@@ -2,11 +2,12 @@ package org.event;
 
 public class Evento {
 
-   public String titolo;
-   public int data;
-   private int[] postiTotali;
+   private String titolo; 
+   private int data;
+   private int postiTotali;
    private int postiPrenotati = 0;
 
+   //Costruttore
    public Evento(String titolo, int data, int postiTotali, int postiPrenotati) {
       this.titolo = titolo;
       this.data = data;
@@ -18,7 +19,7 @@ public class Evento {
 
    // for (int i = 0; i < data.length; i++){
    // int dataCorrente = data[i];
-   // System.out.println(dataCorrente);
+   // System.out.println(dataCorrente); 
 
    // if(dataCorrente == dataAttuale){
    // adesso = true;
@@ -45,16 +46,33 @@ public class Evento {
       return data;
    }
 
+
    public void setData(int data) {
-      this.data = data;
+      if(data < ){
+         this.data = data;
+      }
+      
    }
 
-   public void setPostiPrenotati(int postiPrenotati){
-         this.postiPrenotati = postiPrenotati; 
+   public int getPostiTotali(){
+      return postiTotali;
+   }
+
+   public int getPostiPrenotati(){
+      return postiPrenotati;
+   }
+   
+   @Override
+   public String toString(){
+      return "";
+   }
+
+
+   int newPostiPrenotati = 0;
+   public void setPostiPrenotati(int[] postiPrenotati){
+         this.postiPrenotati = newPostiPrenotati; 
        }
 
-   public void setPostiTotali( int postiTotali){ 
-      }
 
    
 
