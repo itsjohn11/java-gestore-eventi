@@ -39,9 +39,7 @@ public class Evento {
 
    // if()
 
-   public Evento(String string, int i, int j, int k) {
-	//TODO Auto-generated constructor stub
-}
+
 
    public String getTitolo() {
       return this.titolo;

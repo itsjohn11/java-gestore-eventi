@@ -46,6 +46,8 @@ public class Main {
             
             System.out.println(newPostiTotali[i]);
         }
+
+        System.out.println(String.format("%d", args));
         
         // for (int i = newPostiTotali.length - 1; i <= 0; i--){
         //     System.out.println(newPostiTotali[i]);
