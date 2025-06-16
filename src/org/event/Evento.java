@@ -1,6 +1,6 @@
 package org.event;
 
-import java.time.LocalDate;
+// import java.time.LocalDate;
 
 public class Evento {
 
@@ -12,7 +12,7 @@ public class Evento {
    public int postiPrenotati = 0;
 
    //Costruttore
-   public Evento(String titolo, int data, int[] postiTotali) {
+   public Evento(String titolo, int data, int postiTotali) {
       this.titolo = titolo;
       this.data = data;
       this.postiTotali = postiTotali;
@@ -38,6 +38,10 @@ public class Evento {
    // LocalDate dateNow = LocalDate.now();
 
    // if()
+
+   public Evento(String string, int i, int j, int k) {
+	//TODO Auto-generated constructor stub
+}
 
    public String getTitolo() {
       return this.titolo;

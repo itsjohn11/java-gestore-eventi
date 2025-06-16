@@ -1,9 +1,14 @@
 package org.event;
 // import java.time.LocalDate;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
             
+        Evento concerto = new Evento("Unico", 01/01/2025, 4);
+
+        Scanner scanner = new Scanner(System.in);
         //     dateCompare();
 
         
@@ -11,9 +16,6 @@ public class Main {
         //     LocalDate dateNow = LocalDate.now();
         //     LocalDate datepast = LocalDate.of(2025, 10, 1);  
         // }
-
-        
-       
 
         // System.out.println(Unico.getTitolo());
         // System.out.println(Unico.getData());
@@ -31,6 +33,7 @@ public class Main {
         // }
 
         int[] postiTotali = { 1, 2, 3};
+        //nuovo array +1
         int[] newPostiTotali = new int[postiTotali.length + 1];
 
         for(int i = 0; i < postiTotali.length; i++){
@@ -43,9 +46,10 @@ public class Main {
             
             System.out.println(newPostiTotali[i]);
         }
-
-        // int[] newPostiTotali = new int[postiTotali.length - 1];
-
+        
+        // for (int i = newPostiTotali.length - 1; i <= 0; i--){
+        //     System.out.println(newPostiTotali[i]);
+        // }
 
         // Evento iteratore = new Evento(arrayPostiTotali);
 
@@ -59,5 +63,6 @@ public class Main {
         // // for( )
         // String dataFormattata = String.format(null, args)
         // System.out.println();
+        scanner.close();
     }
 }
