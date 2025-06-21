@@ -12,7 +12,7 @@ public class Evento {
    public int postiPrenotati = 0;
 
    //Costruttore
-   public Evento(String titolo, int data, int postiTotali) {
+   public Evento(String titolo, int data, int[] postiTotali) {
       this.titolo = titolo;
       this.data = data;
       this.postiTotali = postiTotali;
@@ -66,20 +66,12 @@ public class Evento {
       return this.postiPrenotati;
    }
 
-   public int getPostoSuccessivo(){
-      if(hasAncoraPosti()){
-         this.postiPrenotati = this.postiPrenotati +1;
-         return this.postiTotali[this.postiPrenotati];
-      }else{
-         return 0;
-      }
-   }
 
    public void addTotale(int nuovoTotale){
       int[] nuoviTotali = new int [this.postiTotali.length + 1];
       nuoviTotali[0] = nuovoTotale;
       for(int i = 0; i < this.postiTotali.length; i++){
-         nuoviTotali[i + 1] = this.postiTotali[i];
+         nuoviTotali[i] = this.postiTotali[i];
       }
       nuoviTotali[nuoviTotali.length -1] = nuovoTotale;
       this.postiTotali = nuoviTotali;
@@ -94,7 +86,8 @@ public class Evento {
 
    @Override
    public String toString(){
-      return String.format(this.titolo, "%d");
+      String dataFormattata = 
+      return String.format("%d", this.titolo);
    }
 
 
