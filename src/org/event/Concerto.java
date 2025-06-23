@@ -1,35 +1,40 @@
 package org.event;
 
-import java.math.BigDecimal;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Concerto extends Evento {
-    public int ora;
-    public BigDecimal prezzo;
+    private LocalTime ora;
+    private float prezzo;
 
-    public Concerto(String titolo, int data, int postiTotali int ora, BigDecimal prezzo) {
+    public Concerto(String titolo, LocalDate data, int[] postiTotali, LocalTime ora, float prezzo) {
         super(titolo, data, postiTotali);
         this.ora = ora;
         this.prezzo = prezzo;
         
      }
-     public int getOra(){
+     public LocalTime getOra(){
         return this.ora;
      }
 
-    public void setOra(int ora) {
+    public void setOra(LocalTime ora) {
         this.ora = ora;
     }
 
-    public BigDecimal getPrezzo() {
+    public float getPrezzo() {
         return this.prezzo;
     }
 
-    public void setPrezzo(BigDecimal prezzo) {
+    public void setPrezzo(float prezzo) {
         this.prezzo = prezzo;
     }
 
 
-
+    @Override
+    public String toString(){
+        return String.format(%d,%d, %s, %d, this.data, this.ora, this.titolo, this.prezzo);
+    }
 
 
 }

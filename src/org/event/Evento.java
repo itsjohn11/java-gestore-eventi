@@ -1,44 +1,35 @@
 package org.event;
 
+import java.time.LocalDate;
+
 // import java.time.LocalDate;
 
 public class Evento {
 
    //valorizzo gli attrobuti 
 
-   public String titolo; 
-   public int data;
-   public int[] postiTotali;
-   public int postiPrenotati = 0;
+   private String titolo; 
+   private LocalDate data;
+   private int[] postiTotali;
+   private int postiPrenotati = 0;
 
    //Costruttore
-   public Evento(String titolo, int data, int[] postiTotali) {
+   public Evento(String titolo, LocalDate data, int[] postiTotali) {
       this.titolo = titolo;
       this.data = data;
       this.postiTotali = postiTotali;
       
    }
 
-   // int dataAttuale = ;
-   // boolean adesso = true;
+   int dataNow = 01/10/2025 ;
+   boolean now = true;
 
    // for (int i = 0; i < data.length; i++){
    // int dataCorrente = data[i];
    // System.out.println(dataCorrente); 
 
-   // int i = 0;
-   // while(i > postiTotali.length ){
-   //    System.out.println(postiTotali[i]);
-   //    i++;
-   // }
-
-
-
    // LocalDate dateEvent = LocalDate.event();
    // LocalDate dateNow = LocalDate.now();
-
-   // if()
-
 
 
    public String getTitolo() {
@@ -49,11 +40,11 @@ public class Evento {
       this.titolo = titolo;  
    }
 
-   public int getData() {
+   public LocalDate getData() {
       return this.data;
    }
 
-   public void setData(int data) {
+   public void setData(LocalDate data) {
       this.data = data;
 
    }
@@ -62,18 +53,33 @@ public class Evento {
       return this.postiTotali;
    }
 
+
    public int getPostiPrenotati(){
       return this.postiPrenotati;
    }
 
-
-   public void addTotale(int nuovoTotale){
-      int[] nuoviTotali = new int [this.postiTotali.length + 1];
-      nuoviTotali[0] = nuovoTotale;
+   //Aggiungi posto
+   public void addPosto(int nuovoTotale){
+      int[] nuovoPosto = new int [this.postiTotali.length + 1];
+      
       for(int i = 0; i < this.postiTotali.length; i++){
+         nuovoPosto[i] = this.postiTotali[i];
+      }
+
+      nuovoPosto[nuovoPosto.length] = nuovoTotale;
+      this.postiTotali = nuovoPosto;
+      // return this.postiTotali[++this.postiPrenotati] ;
+   }
+
+   //rimuovi posto
+   public void removeTotale(int nuovoTotale){
+      int[] nuoviTotali = new int [this.postiTotali.length - 1];
+      
+      for(int i = 0; i < this.postiTotali.length; i--){
          nuoviTotali[i] = this.postiTotali[i];
       }
-      nuoviTotali[nuoviTotali.length -1] = nuovoTotale;
+
+      nuoviTotali[nuoviTotali.length] = nuovoTotale;
       this.postiTotali = nuoviTotali;
       // return this.postiTotali[++this.postiPrenotati] ;
    }
@@ -84,11 +90,10 @@ public class Evento {
    }
 
 
-   @Override
-   public String toString(){
-      String dataFormattata = 
-      return String.format("%d", this.titolo);
-   }
+   // @Override
+   // public String toString(){
+   //    return String.format("%d, %s", this.data, this.titolo);
+   // }
 
 
 
