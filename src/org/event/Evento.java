@@ -2,7 +2,7 @@ package org.event;
 
 import java.time.LocalDate;
 
-// import java.time.LocalDate;
+import java.time.LocalDate;
 
 public class Evento {
 
@@ -14,10 +14,10 @@ public class Evento {
    private int postiPrenotati = 0;
 
    //Costruttore
-   public Evento(String titolo, LocalDate data, int[] postiTotali) {
+   public Evento(String titolo, LocalDate data, int[] postiTotali2) {
       this.titolo = titolo;
       this.data = data;
-      this.postiTotali = postiTotali;
+      this.postiTotali = postiTotali2;
       
    }
 
@@ -28,8 +28,8 @@ public class Evento {
    // int dataCorrente = data[i];
    // System.out.println(dataCorrente); 
 
-   // LocalDate dateEvent = LocalDate.event();
-   // LocalDate dateNow = LocalDate.now();
+   
+   LocalDate dateNow = LocalDate.now();
 
 
    public String getTitolo() {
@@ -90,15 +90,15 @@ public class Evento {
    }
 
 
-   // @Override
-   // public String toString(){
-   //    return String.format("%d, %s", this.data, this.titolo);
-   // }
+   @Override
+   public String toString(){
+      return String.format("%d, %s", this.data, this.titolo);
+   }
 
 
 
 
-
+ 
 
 
    

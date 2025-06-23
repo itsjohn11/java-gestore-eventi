@@ -1,33 +1,35 @@
 package org.event;
-// import java.time.LocalDate;
+import java.time.LocalDate;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        // dateCompare();
+        dateCompare
             
-        // Evento concerto = new Evento("Unico", 01/10/2025, 10);
-        // System.out.println(concerto);
+        Evento concerto = new Evento("Concerto", 01/10/2025, 10);
+        System.out.println(concerto);
 
         Scanner scanner = new Scanner(System.in);
         
-        // private static void dateCompare(){
-        //     LocalDate dateNow = LocalDate.now();
-        //     LocalDate datePast = LocalDate.of(2025, 10, 1);  
-        //     System.out.println("Is dateNow " + datePast.isBefore(dateNow));
-        // }
+        private static void dateCompare(){
+            LocalDate dateNow = LocalDate.now();
+            LocalDate datePast = LocalDate.of(2025, 10, 1);
 
-        // System.out.println(Unico.getTitolo());
-        // System.out.println(Unico.getData());
-        // System.out.println(Unico.getPostiTotali());
-        // System.out.println(Unico.getPostiPrenotati());
+            System.out.println("Is dateNow? " + datePast.isBefore(dateNow));
+        }
+
+        // System.out.println(Concerto.getTitolo());
+        // System.out.println(Concerto.getData());
+        // System.out.println(Concerto.getPostiTotali());
+        // System.out.println(Concerto.getPostiPrenotati());
         
 
         for(int i = 0; i < postiTotali.length; i++){
-            nuovoPosto[i] = postiTotali[i];
-            // System.out.println(postiTotali[i]);
+            
+            System.out.println("inserisci il numero di posti da prenotare");
+            int numeroPosti = Integer.parseInt(scanner.nextLine());
         }
 
         System.out.println(String.format("%d-%s"));
@@ -46,3 +48,4 @@ public class Main {
     }
 
 }
+    

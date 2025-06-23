@@ -27,13 +27,15 @@ public class Concerto extends Evento {
     }
 
     public void setPrezzo(float prezzo) {
+        String prezzoFormattato = prezzo.
         this.prezzo = prezzo;
     }
 
 
+
     @Override
     public String toString(){
-        return String.format(%d,%d, %s, %d, this.data, this.ora, this.titolo, this.prezzo);
+        return super.toString() + ", ora: " + this.ora + ", prezzo: " + this.prezzo;
     }
 
 
