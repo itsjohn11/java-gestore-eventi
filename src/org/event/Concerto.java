@@ -1,37 +1,32 @@
 package org.event;
 
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 public class Concerto extends Evento {
-    private LocalTime ora;
-    private float prezzo;
+    private double ora;
+    private double prezzo;
 
-    public Concerto(String titolo, LocalDate data, int[] postiTotali, LocalTime ora, float prezzo) {
+    public Concerto(String titolo, int data, int postiTotali, double ora, double prezzo) {
         super(titolo, data, postiTotali);
         this.ora = ora;
         this.prezzo = prezzo;
         
      }
-     public LocalTime getOra(){
+     public double getOra(){
         return this.ora;
      }
 
-    public void setOra(LocalTime ora) {
+    public void setOra(double ora) {
         this.ora = ora;
     }
 
-    public float getPrezzo() {
+    public double getPrezzo() {
         return this.prezzo;
     }
 
-    public void setPrezzo(float prezzo) {
-        String prezzoFormattato = prezzo.
+    public void setPrezzo(double prezzo) {
+        // String prezzoFormattato = prezzo.
         this.prezzo = prezzo;
     }
-
-
 
     @Override
     public String toString(){

@@ -2,8 +2,6 @@ package org.event;
 
 import java.time.LocalDate;
 
-import java.time.LocalDate;
-
 public class Evento {
 
    //valorizzo gli attrobuti 
@@ -14,10 +12,10 @@ public class Evento {
    private int postiPrenotati = 0;
 
    //Costruttore
-   public Evento(String titolo, LocalDate data, int[] postiTotali2) {
+   public Evento(String titolo, int data2, int postiTotali2) {
       this.titolo = titolo;
       this.data = data;
-      this.postiTotali = postiTotali2;
+      this.postiTotali = postiTotali;  
       
    }
 
@@ -40,12 +38,12 @@ public class Evento {
       this.titolo = titolo;  
    }
 
-   public LocalDate getData() {
-      return this.data;
+   public String getData() {
+      return  toString();
    }
 
    public void setData(LocalDate data) {
-      this.data = data;
+       this.data = data;
 
    }
 
@@ -85,9 +83,9 @@ public class Evento {
    }
 
 
-   public boolean hasAncoraPosti(){
-      return this.postiPrenotati < this.postiTotali.length - 1;
-   }
+   // public boolean hasAncoraPosti(){
+   //    return this.postiPrenotati < this.postiTotali.length - 1;
+   // }
 
 
    @Override
